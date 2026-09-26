@@ -8,12 +8,26 @@ public class AllDivisor {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         List<Integer> res = new ArrayList<>();
-        for(int i=1;i<=num;i++){
+
+        //Brute force Approach
+        /* for(int i=1;i<=num;i++){
             if(num%i==0){
                res.add(i);
             }
+        } */
+
+        // Optimal Approach
+        for(int i=1;i<=Math.sqrt(num);i++){
+            if(num%i==0){
+                res.add(i);
+            }
+            if((num/i)!=i){
+                res.add(num/i);
+            }
         }
-        System.out.println(res);
+        for(int val:res){
+            System.out.print(val+" ");
+        }
         sc.close();
     }
 }
