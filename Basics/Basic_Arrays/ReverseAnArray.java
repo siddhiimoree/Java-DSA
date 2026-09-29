@@ -12,6 +12,8 @@ public class ReverseAnArray {
         for(int i = 0;i<n;i++){
             arr[i]=sc.nextInt();
         }
+
+        //Brute-Force Approach
         int i = 0;
         int j = n-1;
         while(i<j){
@@ -21,6 +23,13 @@ public class ReverseAnArray {
             i++;
             j--; 
         }
+
+        //Optimal Solution
+
+
+
+
+        
         for(int a = 0;a<n;a++){
             System.out.print(arr[a]+ " ");
 

@@ -13,7 +13,7 @@ public class CheckIfArrayIsSorted {
             arr[i]=sc.nextInt();
         }
         boolean check = true;
-        int temp = arr[0];
+        int temp = arr[0]; 
         for(int i =1;i<n;i++){
             if(temp>arr[i]){
                 check = false;

@@ -6,27 +6,26 @@ public class PerfectNumber {
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
         int a = 1;
-        int sum = 0;
+        int sum = 1;
 
         /* // Brute-Force Approch
         while(a!=num){
             if(num%a==0){
                 sum = sum + a;
             }
-            i++;
+            a++;
         } */
 
         // Optimal Approach
-        for(int i=1;i<=Math.sqrt(num);i++){
-            if(num%i==0){
-                sum = sum+i;
-            }
-            if((num/i)!=i){
-                if((num/i)!=num){
-                   sum = sum + num/i;
-                }
-                
-            }
+        for(int i=2;i*i<num;i++){
+           if(num%i==0){
+                if(i!=(num/i)){
+                  sum = sum + i;
+                  sum = sum + (num/i);
+                }else{
+                    sum = sum + i;
+                 }
+              }
         }
 
 
